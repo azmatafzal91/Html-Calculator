@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <div class="container">
+        <div class="post">
+            <h2>Blog Post Title 1</h2>
+            <p>Author: John Doe</p>
+            <p>Date: October 26, 2023</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna in quam eleifend finibus.</p>
+            <button onclick="showComments(1)">Show Comments</button>
+            <div id="comments1" style="display: none;">
+                <!-- JavaScript will populate comments here -->
+            </div>
+        </div>
+        <div class="post">
+            <h2>Blog Post Title 2</h2>
+            <p>Author: Jane Smith</p>
+            <p>Date: October 25, 2023</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna in quam eleifend finibus.</p>
+            <button onclick="showComments(2)">Show Comments</button>
+            <div id="comments2" style="display: none;">
+                <!-- JavaScript will populate comments here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle showing comments
+        function showComments(postId) {
+            const commentsDiv = document.getElementById(`comments${postId}`);
+            if (commentsDiv.style.display === "none") {
+                commentsDiv.style.display = "block";
+                // You can fetch and populate comments from a server here.
+            } else {
+                commentsDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
